@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header,
+.footer {
+    flex: 0 0 100%;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+}
+
+.container {
+    background-color: rgb(114, 114, 114);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    align-content: center;
+}
+
+.item {
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    border: 2px solid;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Definindo mais de uma coluna entre as seguintes dimensões de tela, as dimensões não citadas terão apenas uma coluna*/
+@media(max-width:2560px) and (min-width:770px) {
+    .container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+/* Definindo um espaçamento entre todos os itens da maior para a menor dimensão de tela */
+@media(max-width:2560px) and (min-width:280px) {
+    .container {
+        gap: 10px;
+    }
+}
+
+@media(max-width:1010px) {
+    .item {
+        display: flex;
+        flex: 1 0 350px;
+    }
+}
+
+@media(max-width:768px) {
+    .item {
+        max-height: 50vh;
+        width: 90%;
+    }
+}
+
+@media(max-width: 425px) {
+    .item {
+        width: 45vh;
+        max-height: 30vh;
+    }
+}
+
+@media(max-width:395px) {
+    .item {
+        width: 90%;
+        max-height: 25vh;
+    }
+}
