@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-/* Definindo mais de uma coluna entre as seguintes dimensões de tela, as dimensões não citadas terão apenas uma coluna*/
+/* Definindo mais de uma coluna entre as seguintes dimensões de tela, as dimensões não citadas terão apenas uma coluna */
 @media(max-width:2560px) and (min-width:770px) {
     .container {
         flex-wrap: wrap;
